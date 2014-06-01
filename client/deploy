@@ -1,0 +1,2 @@
+#scp -r *  root@labs.echonest.com:tests/fun/3dExplorer/client
+rsync  -t *  root@labs.echonest.com:tests/fun/3dExplorer/client
