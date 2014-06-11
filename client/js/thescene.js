@@ -224,7 +224,7 @@ function fetchSeed(which, scene, needed, done) {
     var url = 'http://' + theHost + '/api/v4/playlist/static?api_key=' + api_key.toUpperCase() + '&callback=?';
     $.getJSON(url, { 'artist': seed.seed, 'format':'jsonp', 
                 'results': length, 'type':seed.type,
-                'bucket': ['tracks', 'id:spotify-WW'], 'limit': true}, function(data) {
+                'bucket': ['tracks', 'id:spotify'], 'limit': true}, function(data) {
             if (checkResponse(data)) {
                 populateWithSpotifyData(data.response.songs, done);
             }
